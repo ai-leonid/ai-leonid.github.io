@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Профессиональное резюме и портфолио">
+  <title>Анна Иванова — Резюме</title>
+
+  <style>
+    :root {
+      --bg: #f5f6fa;
+      --card: #ffffff;
+      --text: #202633;
+      --muted: #697386;
+      --accent: #4263eb;
+      --line: #e7eaf0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 48px auto;
+    }
+
+    .hero {
+      background: #202b46;
+      color: white;
+      padding: 48px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero .label {
+      color: #b9c8ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.15;
+      margin: 14px 0 8px;
+    }
+
+    .role {
+      color: #d5ddf3;
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .hero a {
+      color: white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 30px 36px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(20, 30, 60, 0.04);
+    }
+
+    h2 {
+      font-size: 21px;
+      margin: 0 0 20px;
+    }
+
+    .item {
+      padding-left: 20px;
+      border-left: 2px solid var(--line);
+      margin-bottom: 26px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item h3 {
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0 10px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #edf1ff;
+      color: #304bb5;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 20px;
+    }
+
+    .print-button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 18px;
+      border: 1px solid #ffffff80;
+      border-radius: 8px;
+      font: inherit;
+      cursor: pointer;
+      background: transparent;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px auto;
+      }
+
+      .hero {
+        padding: 30px 24px;
+      }
+
+      .card {
+        padding: 24px 20px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0;
+      }
+
+      .hero, .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .hero {
+        background: white;
+        color: #202633;
+        border: 1px solid #ddd;
+      }
+
+      .hero .label, .role, .hero a {
+        color: #333;
+      }
+
+      .print-button, footer {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <header class="hero">
+      <div class="label">Резюме</div>
+      <h1>Анна Иванова</h1>
+      <p class="role">Ваша профессия или должность</p>
+
+      <div class="contacts">
+        <span>📍 Амстердам, Нидерланды</span>
+        <a href="mailto:anna@example.com">✉ anna@example.com</a>
+        <a href="https://www.linkedin.com/" target="_blank"
+           rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+
+      <button class="print-button" onclick="window.print()">
+        Скачать / распечатать PDF
+      </button>
+    </header>
+
+    <section class="card">
+      <h2>Обо мне</h2>
+      <p>
+        Специалист с опытом работы в своей области. Люблю решать
+        сложные задачи, развиваться профессионально и создавать
+        полезные проекты. Умею работать самостоятельно и в команде.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Опыт работы</h2>
+
+      <div class="item">
+        <h3>Название должности</h3>
+        <div class="meta">Компания ABC · 2023 — настоящее время</div>
+        <ul>
+          <li>Отвечала за ключевые рабочие процессы и проекты.</li>
+          <li>Улучшила эффективность работы команды.</li>
+          <li>Достигла измеримых результатов в своей области.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Предыдущая должность</h3>
+        <div class="meta">Компания XYZ · 2020 — 2023</div>
+        <ul>
+          <li>Выполняла основные профессиональные обязанности.</li>
+          <li>Участвовала в развитии продуктов и услуг компании.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Образование</h2>
+      <div class="item">
+        <h3>Название университета</h3>
+        <div class="meta">Специальность · 2016 — 2020</div>
+        <p>Степень, квалификация или дополнительные сведения.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Навыки</h2>
+      <div class="skills">
+        <span class="tag">Коммуникация</span>
+        <span class="tag">Управление проектами</span>
+        <span class="tag">Аналитическое мышление</span>
+        <span class="tag">Работа в команде</span>
+        <span class="tag">Английский язык</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Языки</h2>
+      <p>Русский — родной</p>
+      <p>Английский — B2</p>
+    </section>
+
+    <section class="card">
+      <h2>Контакты</h2>
+      <p>
+        Буду рада обсудить интересные проекты и возможности
+        сотрудничества.
+      </p>
+      <p>
+        Email: <a href="mailto:anna@example.com">anna@example.com</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Анна Иванова · Персональное резюме
+    </footer>
+
+  </main>
+</body>
+</html>
